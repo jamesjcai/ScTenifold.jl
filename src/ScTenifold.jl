@@ -4,7 +4,7 @@ using Statistics, LinearAlgebra, Distributions, Random
 using MultipleTesting, Random, SparseArrays, TSVD, TensorToolbox
 # import KrylovKit
 
-export sctenifoldnet, sctenifoldknk, sctenifoldxct, tenrnet, manialn, drgenes
+export sctenifoldnet, sctenifoldknk, sctenifoldxct, tenrnet, manialn, drgenes, pcnet
 
 const NCOMP1,NCOMP2=3,5
 const NLAYERS,NCELLS=10,500
