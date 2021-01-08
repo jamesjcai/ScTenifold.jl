@@ -1,15 +1,6 @@
-using TensorDecompositions
-
-u = randn(10); v = randn(20); w = randn(30)
-T = cat(map(x -> x * u * v', w)..., dims=3) + 0.2 * randn(10, 20, 30)
-k=2
-F = candecomp(T, k, (randn(10, k), randn(20, k), randn(30, k)), compute_error=true, method=:ALS);
-
-
-# https://juliapackages.com/p/ntfk
-
-import NTFk
 import TensorDecompositions
+import NTFk
+
 
 csize = (2, 3, 4)
 tsize = (5, 10, 15)

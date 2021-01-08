@@ -19,7 +19,11 @@ import LinearAlgebra
 
 @info("Norm $(LinearAlgebra.norm(T_est .- T_orig))")
 
+
+import Cairo, Fontconfig
+
+
 NTFk.plot2matrices(A, Af; progressbar=nothing)
 NTFk.plot2matrices(B, Bf; progressbar=nothing)
 NTFk.plot2matrices(C, Cf; progressbar=nothing)
-NTFk.plotlefttensor(T, T_est; progressbar=nothing)
+NTFk.plotlefttensor(T_orig, T_est; progressbar=nothing)
