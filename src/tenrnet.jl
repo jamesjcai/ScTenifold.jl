@@ -16,5 +16,5 @@ function tenrnet(X::AbstractMatrix{T}; donorm::Bool=true) where T<:Real
         @inbounds A[:,:,k]=sparse(a)
     end
     Z=tensordecomp(A,NCOMP2)
-    return Z
+    return Z,A
 end
