@@ -17,8 +17,8 @@ TensorToolbox = "9c690861-8ade-587a-897e-15364bc6f718"
 [compat]
 Distributions = "0.23.12"
 MultipleTesting = "0.4.1"
-StatsPlots = ""
-TSVD = "0.14.17"
+StatsPlots = "0.14.17"
+TSVD = "0.4.2"
 TensorToolbox = "1.0.1"
 julia = "1.5.0"
 
