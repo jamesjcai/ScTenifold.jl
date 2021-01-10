@@ -1,6 +1,8 @@
-# ScTenifold
+# ScTenifold.jl
 
 *A single-cell gene regulatory network analysis suite in Julia.*
+
+[![Build status](https://ci.appveyor.com/api/projects/status/8ue869x2nadkjvi6?svg=true)](https://ci.appveyor.com/project/jamesjcai/sctenifold-jl)
 
 ## Installation
 
@@ -12,12 +14,12 @@ platforms are distributed at <https://julialang.org/downloads/>. Currently,
 Then, install `ScTenifold.jl` with the following command:
 
 ```julia
-julia> using Pkg; Pkg.add(PackageSpec(url="git://github.com/jamesjcai/ScTenifold.jl.git"))
+using Pkg; Pkg.add(PackageSpec(url="git://github.com/jamesjcai/ScTenifold.jl.git"))
 ```
 
 To check the installation, you can try `using ScTenifold` in your REPL:
 
-    $ julia
+```
        _       _ _(_)_     |  Documentation: https://docs.julialang.org
       (_)     | (_) (_)    |
        _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
@@ -30,14 +32,15 @@ To check the installation, you can try `using ScTenifold` in your REPL:
     [ Info: Precompiling ScTenifold [fcca1770-266e-4af5-8612-876362e279e9]
 
     julia>
-
+```
 
 No error messages mean you have successfully installed ScTenifold.jl.
 
 To run unit tests, execute the following command:
 
-    $ julia -e 'using Pkg; Pkg.test("ScTenifold")'
-
+```julia
+using Pkg; Pkg.test("ScTenifold")
+```
 
 ## Contributing and Questions
 
