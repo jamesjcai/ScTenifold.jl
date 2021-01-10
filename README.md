@@ -1,4 +1,4 @@
-# ScTenifold
+# ScTenifold.jl
 
 *A single-cell gene regulatory network analysis suite in Julia.*
 
