@@ -6,3 +6,4 @@ function normc!(x)
         x[:,i]=x[:,i]./norm(x[:,i])
     end
 end
+rescale(A; dims=1) = (A .- mean(A, dims=dims)) ./ max.(std(A, dims=dims), eps())
