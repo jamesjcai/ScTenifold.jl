@@ -2,13 +2,38 @@ module Knk
 
 export sctenifoldknk
 
-function sctenifoldknk(X::AbstractMatrix{T}, k::Float64) where T<:Real
-#X1=copy(X)
-#X1[k,:].=0
+import ScTenifold.Net
 
+function sctenifoldknk(A::AbstractMatrix{T}, k::Integer) where T<:Real
+    A1=copy(A)
+    A1[k,:].=0
+    return A1
+    #d,_,_=Net.manialn(A,A1)
+    #fc,p,adjp=Net.drgenes(d)
 end
+
+function sctenifoldknk(A::AbstractMatrix{T},genelist::Array{String,1},targetgene::String) where T<:Real
+    # genelist=vec(readdlm("genelist.txt",String))
+    k=findall(genelist.==targetgene)[1]
+    # fc,p,adjp=sctenifoldknk(A, k)
+    return sctenifoldknk(A, k)
 end
+
+function sctenifoldknk(A::AbstractMatrix{T},genelist::Array{String,1},k::Integer) where T<:Real
+    # genelist=vec(readdlm("genelist.txt",String))
+    # k=findall(genelist.==targetgene)[1]
+    # fc,p,adjp=sctenifoldknk(A, k)
+    return sctenifoldknk(A, k)
+end
+
 #=
+function t1(genelist::Vector{String})
+    genelist[1]
+end
+function t2(genelist::Array{String,1})
+    genelist[1]
+end
+
 using DelimitedFiles
 cd(dirname(@__FILE__))
 X0=readdlm("X.txt",',',Int16)
