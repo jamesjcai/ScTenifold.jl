@@ -26,6 +26,8 @@ function sctenifoldknk(A::AbstractMatrix{T},genelist::Array{String,1},k::Integer
     return sctenifoldknk(A, k)
 end
 
+end
+
 #=
 function t1(genelist::Vector{String})
     genelist[1]
@@ -66,3 +68,4 @@ x=rand(Chisq(1), length(fc))
 qqplot(x, fc)
 end
 =#
+
