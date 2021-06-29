@@ -1,5 +1,5 @@
 cd(dirname(@__FILE__))
-
+# cd("U:\\GitHub\\ScTenifold.jl\\src")
 # include("tensordecomp.jl")
 
 include("ScTenifold.jl")

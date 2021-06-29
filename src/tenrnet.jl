@@ -4,6 +4,7 @@ function tenrnet(X::AbstractMatrix{T}; donorm::Bool=true) where T<:Real
         lbsz=sum(X,dims=1)
         # X=(X./lbsz)*median(lbsz)
         X=(X./lbsz)*1e4
+        X=log.(X.+1)
     end
     A=zeros(Float16, ℊ, ℊ, NLAYERS)
     for k=1:NLAYERS
