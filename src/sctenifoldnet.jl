@@ -18,7 +18,7 @@ include("manialn.jl")
 include("drgenes.jl")
 
 
-function sctenifoldnet(X::AbstractMatrix{T}, Y::AbstractMatrix{T}; donorm::Bool=false) where T<:Real
+function sctenifoldnet(X::AbstractMatrix{T}, Y::AbstractMatrix{T}; donorm::Bool=true) where T<:Real
     Z0,_=tenrnet(X,donorm=donorm)
     Z1,_=tenrnet(Y,donorm=donorm)
     Z0=0.5*(Z0+Z0')
