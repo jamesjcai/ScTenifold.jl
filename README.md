@@ -39,7 +39,7 @@ No error messages mean you have successfully installed ScTenifold.jl.
 To run unit tests, execute the following command:
 
 ```julia
-using Pkg; Pkg.test("ScTenifold")
+Pkg.test("ScTenifold")
 ```
 
 ## Contributing and Questions
