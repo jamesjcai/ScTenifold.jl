@@ -6,7 +6,7 @@ const NCOMP1,NCOMP2=3,5
 const NLAYERS,NCELLS=10,500
 
 using Statistics, LinearAlgebra, Distributions, Random
-using MultipleTesting, Random, SparseArrays, TSVD, TensorToolbox
+using MultipleTesting, Random, SparseArrays, TSVD, TensorToolbox, Arpack
 # import KrylovKit
 
 
