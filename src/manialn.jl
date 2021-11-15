@@ -1,4 +1,4 @@
-function manialn(X::AbstractMatrix{T},Y::AbstractMatrix{T}) where T<:Real
+function manialn(X::AbstractMatrix{T}, Y::AbstractMatrix{T}, usearpack::Bool=false) where T<:Real
     μ,dim=0.9,30
     n1,n2=size(X,1),size(Y,1)
     W₁,W₂=X.+1,Y.+1
@@ -8,7 +8,11 @@ function manialn(X::AbstractMatrix{T},Y::AbstractMatrix{T}) where T<:Real
     L=diagm(vec(sum(abs.(𝕎),dims=1))).-𝕎
     # λ,V =KrylovKit.eigsolve(L,35,:SR,krylovdim=40)
     # V=hcat(V)
-    λ,V = eigen(L)
+    if usearpack
+        λ,V = Arpack.eigs(L,nev=dim,which=:SR)
+    else
+        λ,V = eigen(L)
+    end
     i=real(λ).>=1e-8
     V=real(V[:,i])
     dim=min(dim,size(V,2))

@@ -7,9 +7,12 @@ import ScTenifold.Net
 function sctenifoldknk(A::AbstractMatrix{T}, k::Integer) where T<:Real
     A1=copy(A)
     A1[k,:].=0
-    return A1
+    #return A1
     #d,_,_=Net.manialn(A,A1)
     #fc,p,adjp=Net.drgenes(d)
+    d=Net.manialn(A,A1)
+    fc,p,adjp=Net.drgenes(d)
+    return d,fc,p,adjp
 end
 
 function sctenifoldknk(A::AbstractMatrix{T},genelist::Array{String,1},targetgene::String) where T<:Real
