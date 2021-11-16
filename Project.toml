@@ -18,7 +18,7 @@ TensorToolbox = "9c690861-8ade-587a-897e-15364bc6f718"
 [compat]
 Arpack = ">= 0.5.3"
 Distributions = ">= 0.23.12"
-MultipleTesting = ">= 0.8.0"
+MultipleTesting = ">= 0.5.0"
 StatsPlots = ">= 0.14.17"
 TSVD = ">= 0.4.2"
 TensorToolbox = ">= 1.0.1"
