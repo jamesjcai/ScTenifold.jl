@@ -1,7 +1,7 @@
 name = "ScTenifold"
 uuid = "fcca1770-266e-4af5-8612-876362e279e9"
 authors = ["James Cai <jamescai@genomezoo.net>"]
-version = "0.1.1"
+version = "0.1.2"
 
 [deps]
 Arpack ="7d9fca2a-8960-54d3-9f78-7d1dccf2cb97"
