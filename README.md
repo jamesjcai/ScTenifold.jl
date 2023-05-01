@@ -14,7 +14,7 @@ platforms are distributed at <https://julialang.org/downloads/>. Currently,
 Then, install `ScTenifold.jl` with the following command:
 
 ```julia
-using Pkg; Pkg.add(PackageSpec(url="git://github.com/jamesjcai/ScTenifold.jl.git"))
+using Pkg; Pkg.add(url="https://github.com/jamesjcai/ScTenifold.jl.git")
 ```
 
 To check the installation, you can try `using ScTenifold` in your REPL:
